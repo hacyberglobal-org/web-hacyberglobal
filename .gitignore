@@ -1,0 +1,36 @@
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build & Dependencies
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE Files
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+
+# Sensitive Data
+secrets.json
+config.production.json
+private-keys/
+cloudflare-token
+api-keys/
