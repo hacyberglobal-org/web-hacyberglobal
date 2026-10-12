@@ -1,0 +1,88 @@
+;;
+;; Domain:     hacyberglobal.dpdns.org.
+;; Exported:   2026-10-12 00:28:39
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+hacyberglobal.dpdns.org	3600	IN	SOA	jerome.ns.cloudflare.com. dns.cloudflare.com. 2054343151 10000 2400 604800 3600
+
+;; NS Records
+hacyberglobal.dpdns.org.	86400	IN	NS	jerome.ns.cloudflare.com.
+hacyberglobal.dpdns.org.	86400	IN	NS	monroe.ns.cloudflare.com.
+
+;; A Records
+bot.hacyberglobal.dpdns.org.	1	IN	A	35.219.200.198 ; cf_tags=cf-proxied:false
+fallback.hacyberglobal.dpdns.org.	1	IN	A	172.64.36.1 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	18.232.7.146 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	76.76.21.21 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	185.199.111.153 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	185.199.110.153 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	185.199.109.153 ; cf_tags=cf-proxied:true
+hacyberglobal.dpdns.org.	1	IN	A	185.199.108.153 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+_acme-challenge_tko4xnq2rja5zoh7.bot.hacyberglobal.dpdns.org.	1	IN	CNAME	777398ae-bc5d-4d24-b379-33deef02cd75.11.authorize.certificatemanager.goog. ; cf_tags=cf-proxied:false
+checker.hacyberglobal.dpdns.org.	1	IN	CNAME	cname.vercel-dns.com. ; cf_tags=cf-proxied:false
+i7dx2u6ropq5uepdcrgv23qxgi7quyil._domainkey.web.hacyberglobal.hacyberglobal.dpdns.org.	1	IN	CNAME	i7dx2u6ropq5uepdcrgv23qxgi7quyil.dkim.custom-email-domain.stripe.com. ; cf_tags=cf-proxied:false
+lead.hacyberglobal.dpdns.org.	1	IN	CNAME	cname.vercel-dns.com. ; cf_tags=cf-proxied:false
+pay.hacyberglobal.hacyberglobal.dpdns.org.	1	IN	CNAME	hosted-checkout.stripecdn.com. ; 300 cf_tags=cf-proxied:false
+web.hacyberglobal.dpdns.org.	1	IN	CNAME	cname.vercel-dns.com. ; cf_tags=cf-proxied:false
+
+;; MX Records
+bot.hacyberglobal.dpdns.org.	1	IN	MX	47 route3.mx.cloudflare.net.
+bot.hacyberglobal.dpdns.org.	1	IN	MX	87 route2.mx.cloudflare.net.
+bot.hacyberglobal.dpdns.org.	1	IN	MX	35 route1.mx.cloudflare.net.
+checker.hacyberglobal.dpdns.org.	1	IN	MX	47 route3.mx.cloudflare.net.
+checker.hacyberglobal.dpdns.org.	1	IN	MX	87 route2.mx.cloudflare.net.
+checker.hacyberglobal.dpdns.org.	1	IN	MX	35 route1.mx.cloudflare.net.
+hacyberglobal.dpdns.org.	1	IN	MX	47 route3.mx.cloudflare.net.
+hacyberglobal.dpdns.org.	1	IN	MX	87 route2.mx.cloudflare.net.
+hacyberglobal.dpdns.org.	1	IN	MX	35 route1.mx.cloudflare.net.
+lead.hacyberglobal.dpdns.org.	1	IN	MX	47 route3.mx.cloudflare.net.
+lead.hacyberglobal.dpdns.org.	1	IN	MX	87 route2.mx.cloudflare.net.
+lead.hacyberglobal.dpdns.org.	1	IN	MX	35 route1.mx.cloudflare.net.
+web.hacyberglobal.dpdns.org.	1	IN	MX	47 route3.mx.cloudflare.net.
+web.hacyberglobal.dpdns.org.	1	IN	MX	87 route2.mx.cloudflare.net.
+web.hacyberglobal.dpdns.org.	1	IN	MX	35 route1.mx.cloudflare.net.
+
+;; TXT Records
+_acme-challenge.pay.hacyberglobal.hacyberglobal.dpdns.org.	1	IN	TXT	"84SzTnHttTg0Klzt5ZMeXpNZ-sf16sJ4UrAGFBRgEgQ" ; 300
+bot.hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+bot.hacyberglobal.dpdns.org.	1	IN	TXT	"fah-claim=023-02-41fde570-3399-4f6c-b47f-1fbc77e4deeb"
+bot.hacyberglobal.dpdns.org.	1	IN	TXT	"fah-claim=023-02-41fde570-3399-4f6c-b47f-1fbc77e4deeb"
+cf2024-1._domainkey.hacyberglobal.dpdns.org.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiweykoi+o48IOGuP7GR3X0MOExCUDY/BCRHoWBnh3rChl7WhdyCxW3jgq1daEjPPqoi7sJvdg5hEQVsgVRQP4DcnQDVjGMbASQtrY4WmB1VebF+RPJB2ECPsEDTpeiI5ZyUAwJaVX7r6bznU67g7LvFq35yIo4sdlmtZGV+i0H4cpYH9+3JJ78k" "m4KXwaf9xUJCWF6nxeD+qG6Fyruw1Qlbds2r85U9dkNDVAS3gioCvELryh1TxKGiVTkg4wqHTyHfWsp7KD3WQHYJn0RyfJJu6YEmL77zonn7p2SRMvTMP3ZEXibnC9gz3nnhR6wcYL8Q7zXypKTMD58bTixDSJwIDAQAB"
+checker.hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+_digitalplat-verify.hacyberglobal.dgdns.org.hacyberglobal.dpdns.org.	1	IN	TXT	"digitalplat-verification=3auGg4IbUmERGe6ysAlAYuVWJenNQx73kVW5WSc1dDk"
+_dmarc.hacyberglobal.dpdns.org.	1	IN	TXT	"v=DMARC1; p=none; rua=mailto:7cf182dd3a9c425b8f298b82335fc61d@dmarc-reports.cloudflare.net"
+hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+hacyberglobal.dpdns.org.	1	IN	TXT	"base44-domain-verification-69d58b=RnXCIbljr-17ylpVG1WEAIE8lLbS4Jti0Ztmu8wxQO0"
+hacyberglobal.dpdns.org.	1	IN	TXT	"google-site-verification=n7ECyUmQagKB2NSjhm0UWuVnhhvYdxWQH5ez_l2F75w" ; Google site verification
+hacyberglobal.dpdns.org.	1	IN	TXT	"google-site-verification=auHqv-S6fYw6gQc0PYL1PRpVWVih2i17BDz1HvWVpXo"
+hacyberglobal.hacyberglobal.dpdns.org.	1	IN	TXT	"stripe-verification=c33ce9347d018d98f2fb00a0b72f4a09455dc5ef930a2725b8175fc66aace895"
+lead.hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+orders.hacyberglobal.dpdns.org.	1	IN	TXT	"tiktok-developers-site-verification=sG8lFdz1wOoAoQOqGlXomfk8cviIG77f"
+_vercel.dgdns.org.hacyberglobal.dpdns.org.	1	IN	TXT	"vc-domain-verify=web.hacyberglobal.dgdns.org,79150f8da0828ed34276"
+_vercel.hacyberglobal.dpdns.org.	1	IN	TXT	"vc-domain-verify=lead.hacyberglobal.dpdns.org,0694841b98c369b08aba"
+_vercel.hacyberglobal.dpdns.org.	1	IN	TXT	"vc-domain-verify=checker.hacyberglobal.dpdns.org,0080db9c4e4cd58ea1a6"
+web.hacyberglobal.dpdns.org.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+www.hacyberglobal.dpdns.org.	1	IN	TXT	"google-site-verification=auHqv-S6fYw6gQc0PYL1PRpVWVih2i17BDz1HvWVpXo"
