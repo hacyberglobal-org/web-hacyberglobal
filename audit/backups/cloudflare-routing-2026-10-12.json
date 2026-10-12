@@ -1,0 +1,116 @@
+{
+  "backup_created_at": "2026-10-12",
+  "zone_id": "c6bdc86cc2ac044ef1d7b3fd1ff66155",
+  "zone_name": "hacyberglobal.dpdns.org",
+  "redirect_ruleset": {
+    "description": "",
+    "id": "40c0e67670af4204ab223a57d7d01e5c",
+    "kind": "zone",
+    "last_updated": "2026-09-12T01:00:18.779315Z",
+    "name": "default",
+    "phase": "http_request_dynamic_redirect",
+    "rules": [
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "preserve_query_string": false,
+            "status_code": 301,
+            "target_url": {
+              "expression": "wildcard_replace(http.request.full_uri, r\"http://* bot .hacyberglobal.dpdns.org\", r\"https://${1} bot .hacyberglobal.dpdns.org\")"
+            }
+          }
+        },
+        "description": "Redirect from HTTP to HTTPS [Template]",
+        "enabled": true,
+        "expression": "(http.request.full_uri wildcard r\"http://* bot .hacyberglobal.dpdns.org\")",
+        "id": "f328c42d28214da0a41f2abf9c85dddd",
+        "last_updated": "2026-07-18T03:03:54.935373Z",
+        "ref": "f328c42d28214da0a41f2abf9c85dddd",
+        "version": "1"
+      },
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "preserve_query_string": true,
+            "status_code": 301,
+            "target_url": {
+              "expression": "wildcard_replace(http.request.full_uri, r\"https://www.*hacyberglobal.dgdns.org\", r\"https://${1}hacyberglobal.dgdns.org\")"
+            }
+          }
+        },
+        "description": "Redirect from WWW to root [Template]",
+        "enabled": true,
+        "expression": "(http.request.full_uri wildcard r\"https://www.*hacyberglobal.dgdns.org\")",
+        "id": "e11af770162940889368671ea6a5eaaf",
+        "last_updated": "2026-07-18T03:06:35.864114Z",
+        "ref": "e11af770162940889368671ea6a5eaaf",
+        "version": "1"
+      },
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "preserve_query_string": true,
+            "status_code": 301,
+            "target_url": {
+              "value": "hacyberglobal.dgdns.org"
+            }
+          }
+        },
+        "description": "hacyberglobal.dgdns.org ",
+        "enabled": true,
+        "expression": "true",
+        "id": "d9d2d0b7c4284511b134aa2010531be7",
+        "last_updated": "2026-09-12T00:54:59.351612Z",
+        "ref": "d9d2d0b7c4284511b134aa2010531be7",
+        "version": "1"
+      }
+    ],
+    "version": "5"
+  },
+  "worker_domains": [
+    {
+      "id": "b58ce582ce6558e927bea71754e36e25e8031a20",
+      "zone_id": "c6bdc86cc2ac044ef1d7b3fd1ff66155",
+      "zone_name": "hacyberglobal.dpdns.org",
+      "hostname": "www.hacyberglobal.dpdns.org",
+      "service": "hacyberglobal",
+      "environment": "production",
+      "cert_id": "fd20a803-4c00-48aa-84ea-1e0ea29347de",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "c5dfe7f0c3318bca991d4e5fb63931716e0c14b1",
+      "zone_id": "c6bdc86cc2ac044ef1d7b3fd1ff66155",
+      "zone_name": "hacyberglobal.dpdns.org",
+      "hostname": "dashboard.hacyberglobal.dpdns.org",
+      "service": "app",
+      "environment": "production",
+      "cert_id": "8f99686f-a8ea-4453-8551-5f8e1ad25adf",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "04391de19d5431bdfaba25348326302a033ea1e9",
+      "zone_id": "c6bdc86cc2ac044ef1d7b3fd1ff66155",
+      "zone_name": "hacyberglobal.dpdns.org",
+      "hostname": "service.hacyberglobal.dpdns.org",
+      "service": "nameserver",
+      "environment": "production",
+      "cert_id": "78e00333-f97e-44cd-a3bb-4983c6aa3f1a",
+      "previews_enabled": false,
+      "enabled": true
+    }
+  ],
+  "worker_routes": [
+    {
+      "id": "e2326c8eb0004558bd9027d68a7e4ced",
+      "pattern": "api.hacyberglobal.dpdns.org/v1/*",
+      "script": "app",
+      "request_limit_fail_open": false
+    }
+  ]
+}
