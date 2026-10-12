@@ -1,0 +1,10 @@
+--38dfe4fe10151fd35650a57584ebb0d2dafee307d19464837d1fde3d45cc
+Content-Disposition: form-data; name="worker.js"; filename="worker.js"
+Content-Type: application/javascript+module
+
+export default {
+  async fetch(request, env) {
+    return new Response("Hello world")
+  }
+}
+--38dfe4fe10151fd35650a57584ebb0d2dafee307d19464837d1fde3d45cc--
